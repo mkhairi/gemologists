@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /
+    meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport" /
+    meta name="description" content="Invite Us"
+    meta name="author" content="Mohd Khairi Mohd Adnan"
+    title Gemologists
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    .navbar-fixed
+      nav class="#{@color} darken-1"
+        .container
+          .nav-wrapper
+            a#logo-container.brand-logo href="/" Gem Labs
+            a.button-collapse data-activates="mobile-demo" href="#" 
+              i.mdi-navigation-menu
+            ul.right.hide-on-med-and-down
+              li
+                a href="#{url_for}" 
+                  i.mdi-navigation-refresh
+
+              - if user_signed_in?
+                li              
+                  = link_to info_index_path do
+                    i.mdi-action-info-outline
+                li
+                  = link_to destroy_user_session_url, data: {method: :delete} do
+                    i.mdi-action-settings-power
+            ul#mobile-demo.side-nav
+              li
+                a href="/"  Link
+              li
+                a href="/"  Link
+
+    = yield :head
+    .container
+      = yield
+      br
+      .row
+        = debug(params)
+    
+    = javascript_include_tag 'loader'

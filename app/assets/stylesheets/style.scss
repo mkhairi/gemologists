@@ -1,0 +1,62 @@
+.gain-weight {
+  font-weight: 400;
+}
+
+#index-banner {
+    min-height: 632px;
+    max-height: 864px;
+    position: relative;
+}
+#sub-banner {
+    min-height: 200px;
+    max-height: 864px;
+    position: relative;
+}
+
+
+.text_h {
+    padding: 15% 0;
+    font-size: 6.0em;
+    font-weight: 100;
+    color:white;
+}
+
+.brand-logo{
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: 200;
+    padding: 0;
+}
+
+.text_h2 {font-weight: 100;margin-bottom: 4%; line-height: 4.5rem;}
+
+.span_h2 {font-weight: 300;color: #2196F3;}
+
+.text_b{color: #2196F3;}
+
+
+#error_explanation {
+  transition: box-shadow .25s;
+  padding: 20px;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 2px;
+  @extend .white-text;
+  @extend .red, .darken-3;
+}
+
+#error_explanation h2 {
+  font-size: 16px;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+}

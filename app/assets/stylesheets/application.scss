@@ -1,0 +1,40 @@
+@import "materialize";
+@import "style";
+$step:      1;
+$minValue:  -10;
+$maxValue:  10;
+@import "boxmodel";
+@import "prism";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+html.turbolinks-progress-bar::before {
+  background-color: red !important;
+  height: 5px !important;
+}
+
+.btn-group-justified {
+    border-collapse: separate;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.btn-group-justified > .btn-floating, .btn-group-justified > .btn-group {
+    display: table-cell;
+    float: none;
+    width: 1%;
+}
+.btn-group-justified > .btn-group .btn-floating {
+    width: 100%;
+}
+.btn-group-justified > .btn-group .dropdown-menu {
+    left: auto;
+}

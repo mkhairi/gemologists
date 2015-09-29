@@ -1,0 +1,32 @@
+.row
+  .col.s12
+    br
+    ul.tabs
+      li.tab.col.s3
+        a.active href="#tab1" Gemfile
+      li.tab.col.s3
+        a href="#tab2" Gemfile.lock
+      li.tab.col.s3
+        a href="#tab3" User model
+      li.tab.col.s3
+        a href="#tab4" Devise config
+
+  #tab1.col.s12
+    pre
+      code.language-ruby = %x{cat Gemfile}
+
+  #tab2.col.s12
+    pre
+      code.language-ruby = %x{cat Gemfile.lock}
+
+
+  #tab3.col.s12
+    pre
+      code.language-ruby = %x{cat app/models/user.rb}
+
+  #tab4.col.s12
+    pre
+      code.language-ruby = %x{cat config/initializers/devise.rb}
+
+
+
